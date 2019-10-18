@@ -17,12 +17,14 @@ function reload() {
 $('#addCategory').on('submit', function () {
 
     $.ajax({
+
         type: 'post',
         url: '/categories',
         data: $(this).serialize(),
         success: function (res) {
             reload()     
         }
+        
     })
     return false;
 })
